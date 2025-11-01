@@ -180,5 +180,10 @@ body{
   .hero-overlay{ text-align:center; }
   .site-footer{ flex-direction:column; gap:8px; text-align:center; }
 }
+.brand-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 8px;
+}
 
 /* Simple animation: reveal on load */
