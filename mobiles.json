@@ -1,17 +1,44 @@
-fetch('mobiles.json')
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('mobiles');
-    data.forEach(phone => {
-      const card = document.createElement('div');
-      card.classList.add('mobile-card');
-      card.innerHTML = `
-        <img src="${phone.logo}" alt="${phone.brand} Logo" class="brand-logo">
-        <h3>${phone.brand} ${phone.model}</h3>
-        <p><strong>Price:</strong> ${phone.price}</p>
-        <p><strong>EMI:</strong> ${phone.emi}</p>
-      `;
-      container.appendChild(card);
-    });
-  })
-  .catch(err => console.error("Error loading mobiles.json", err));
+[
+  {
+    "brand": "Oppo",
+    "model": "A3 Pro",
+    "price": "₹17,999",
+    "emi": "Available via Bajaj, HDB, IDFC",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/3b/OPPO_Logo_2019.svg"
+  },
+  {
+    "brand": "Vivo",
+    "model": "Y18e",
+    "price": "₹7,999",
+    "emi": "Available via Bajaj, HDB, IDFC",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Vivo_logo_2019.svg"
+  },
+  {
+    "brand": "Redmi",
+    "model": "11x 5G",
+    "price": "₹13,499",
+    "emi": "Available via Bajaj, HDB, IDFC",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/29/Redmi_logo.svg"
+  },
+  {
+    "brand": "Samsung",
+    "model": "Galaxy M14",
+    "price": "₹10,999",
+    "emi": "Available via Bajaj, HDB, IDFC",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"
+  },
+  {
+    "brand": "Realme",
+    "model": "Narzo 70x",
+    "price": "₹11,499",
+    "emi": "Available via Bajaj, HDB, IDFC",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/4/45/Realme_logo.svg"
+  },
+  {
+    "brand": "iQOO",
+    "model": "Z9 5G",
+    "price": "₹16,499",
+    "emi": "Available via Bajaj, HDB, IDFC",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/88/IQOO_logo.svg"
+  }
+]
