@@ -16,6 +16,24 @@ document.addEventListener('DOMContentLoaded', () => {
       grid.innerHTML = '<p class="muted">Unable to load products at the moment.</p>';
     });
 
+  fetch('mobiles.json')
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById('mobiles');
+    data.forEach(item => {
+      const card = document.createElement('div');
+      card.classList.add('mobile-card');
+      card.innerHTML = `
+        <img src="${item.logo}" alt="${item.brand} Logo" class="brand-logo">
+        <h3>${item.brand} ${item.model}</h3>
+        <p>Price: ${item.price}</p>
+        <p>EMI: ${item.emi}</p>
+      `;
+      container.appendChild(card);
+    });
+  });
+
+  
   // reveal cards when appended
   function renderProducts(products){
     const grid = document.getElementById('product-grid');
