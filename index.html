@@ -4,18 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech Universe | Best Smartphone Deals in Haldibari</title>
-  <meta name="description" content="Tech Universe offers the best smartphone deals from Oppo, Vivo, Redmi, Samsung, Realme, iQOO, Motorola & Lava. Easy EMI options via Bajaj, HDB, and IDFC Finance." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Tech Universe offers the best deals on smartphones from Oppo, Vivo, Redmi, Samsung, Realme, and more. EMI available through Bajaj, HDB, and IDFC.">
 
-  <!-- ✅ JSON-LD for SEO -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Tech Universe | Best Smartphone Deals in Haldibari">
+  <meta property="og:description" content="Find top deals on Oppo, Vivo, Redmi, Samsung, Realme & more. EMI options from Bajaj, HDB, IDFC available!">
+  <meta property="og:image" content="https://raw.githubusercontent.com/your-username/tech-universe/main/assets/store-banner.jpg">
+  <meta property="og:url" content="https://your-username.github.io/tech-universe/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tech Universe | Best Smartphone Deals in Haldibari">
+  <meta name="twitter:description" content="Shop the best smartphone brands with easy EMI options. Visit Tech Universe today!">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/your-username/tech-universe/main/assets/store-banner.jpg">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Store",
+    "@type": "ElectronicsStore",
     "name": "Tech Universe",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Redmi_logo.svg",
+    "image": "https://raw.githubusercontent.com/your-username/tech-universe/main/assets/store-banner.jpg",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Goshala Road (Busstand)",
@@ -25,50 +39,55 @@
       "addressCountry": "IN"
     },
     "telephone": "+91-7074550550",
-    "openingHours": "Mo-Su 10:00-21:00",
     "url": "https://your-username.github.io/tech-universe/"
   }
   </script>
 </head>
 
 <body>
+  <!-- Preloader -->
+  <div id="preloader"><div class="spinner"></div></div>
+
   <!-- Header -->
   <header>
-    <div class="banner">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Tech Universe Banner">
-      <div class="banner-text">
-        <h1>📱 Tech Universe</h1>
-        <p>Best Smartphone Deals in Haldibari</p>
-      </div>
-    </div>
+    <img src="https://raw.githubusercontent.com/your-username/tech-universe/main/assets/store-banner.jpg" alt="Tech Universe Banner" class="banner">
+    <h1>Tech Universe</h1>
+    <p>Best Deals on Smartphones in Haldibari</p>
+    <button id="themeToggle" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
   </header>
 
-  <!-- Offers Section -->
-  <section id="offers">
-    <h2>🔥 Latest Smartphone Deals</h2>
-    <div id="mobiles" class="mobile-container"></div>
+  <!-- Product Section -->
+  <section class="products">
+    <h2>Available Smartphones</h2>
+    <div id="product-list"></div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>📞 Contact Us</h2>
-    <p><i class="fas fa-phone"></i> +91 7074550550</p>
-    <p><i class="fas fa-map-marker-alt"></i> Goshala Road (Busstand), Haldibari, Coochbehar - 735122</p>
-
-    <!-- Google Map -->
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28853.91722466186!2d89.205!3d26.343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e30d57ac5e38b7%3A0x4b28a6b85c9df5b9!2sHaldibari%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
-      width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
-
-    <div class="contact-buttons">
-      <a href="tel:+917074550550" class="btn call"><i class="fas fa-phone-alt"></i> Call Now</a>
-      <a href="https://wa.me/917074550550" class="btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <!-- EMI Offers -->
+  <section class="emi">
+    <h2>Easy EMI Options Available</h2>
+    <p>Finance Partners:</p>
+    <div class="partners">
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/02/Bajaj_Finserv_Logo.png" alt="Bajaj Finserv">
+      <img src="https://upload.wikimedia.org/wikipedia/en/4/48/HDB_Financial_Services_logo.png" alt="HDB Finance">
+      <img src="https://upload.wikimedia.org/wikipedia/en/2/28/IDFC_First_Bank_logo.svg" alt="IDFC Bank">
     </div>
   </section>
 
+  <!-- Google Map -->
+  <section class="map">
+    <h2>Visit Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28950.932208831492!2d89.207!3d26.341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e313f6e9d3b4cf%3A0x77d4e1b6c0b0c7f1!2sHaldibari%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1709218888888" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  <!-- Contact Buttons -->
+  <div class="contact-buttons">
+    <a href="tel:+917074550550" class="btn call"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/917074550550" target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+    <a href="https://goo.gl/maps/X7hVV3EjXv62" target="_blank" class="btn map"><i class="fas fa-map-marker-alt"></i></a>
+  </div>
+
   <footer>
-    <p>© 2025 Tech Universe | Designed with ❤️ in Haldibari</p>
+    <p>© 2025 Tech Universe | Designed by U. Roy</p>
   </footer>
 
   <script src="script.js"></script>
