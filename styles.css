@@ -1,189 +1,127 @@
-/* Basic reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-:root{
-  --blue-700: #0667d9;
-  --blue-500: #1080ff;
-  --muted: #6b7280;
-  --card-bg: #ffffff;
-  --radius: 12px;
-  --max-width: 1100px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Body */
-body{
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background: #f6f8fb;
-  color: #111827;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
-  line-height:1.45;
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  text-align: center;
 }
 
-/* Hero / Banner */
-.site-hero{
+/* Header Banner */
+header {
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  color: white;
+  animation: fadeIn 1s ease-in;
+}
+
+.banner {
   position: relative;
-  width:100%;
-  overflow:hidden;
-  background: linear-gradient(90deg, var(--blue-700), var(--blue-500));
-  color: #fff;
-  padding: 40px 15px;
-  text-align: left;
-}
-.banner-img{
-  display:none; /* hidden for design; banner overlay used */
-}
-.hero-overlay{
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 10px 15px;
-}
-.logo{
-  width:72px;
-  height:72px;
-  border-radius: 10px;
-  object-fit:cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-  margin-bottom: 6px;
-}
-.site-title{
-  font-size: clamp(28px, 4vw, 56px);
-  margin: 6px 0;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-.tagline{
-  font-size: clamp(14px, 1.5vw, 18px);
-  opacity: .95;
-  margin-bottom: 14px;
+  padding: 40px 10px;
 }
 
-/* Brand row */
-.brand-row{
-  display:flex;
-  gap:14px;
-  align-items:center;
-  margin-top:12px;
-  flex-wrap:wrap;
-}
-.brand-logo{
-  height:28px;
-  opacity: .95;
-  filter: brightness(0) invert(1);
+.banner img {
+  width: 120px;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-in;
 }
 
-/* Container */
-.container{
-  max-width: var(--max-width);
-  margin: 26px auto;
-  padding: 0 16px;
+.banner-text h1 {
+  font-size: 2.2em;
 }
 
-/* Sections */
-.section{
-  background: transparent;
-  margin-bottom: 28px;
-}
-.section-title{
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 12px;
+.banner-text p {
+  font-size: 1.1em;
+  margin-top: 5px;
 }
 
-/* Grid */
-.grid{
-  display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 16px;
+section {
+  padding: 30px 10px;
 }
 
-/* Product card */
-.card{
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 14px;
-  box-shadow: 0 6px 20px rgba(16,24,40,0.06);
-  transition: transform .25s ease, box-shadow .25s ease;
-  opacity: 0;
-  transform: translateY(12px);
+h2 {
+  margin-bottom: 20px;
+  color: #007bff;
 }
-.card.visible{ opacity:1; transform:none; }
-.card:hover{ transform: translateY(-6px); box-shadow: 0 18px 40px rgba(16,24,40,0.08); }
-.card img.product-img{
-  width:100%;
-  height:160px;
-  object-fit:cover;
-  border-radius:10px;
-  margin-bottom:10px;
-}
-.mobile-title{
-  font-weight: 600;
-  margin-bottom:6px;
-}
-.price-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-top:8px;
-}
-.price{ font-weight:700; color: var(--blue-700); }
-.emi{ font-size:13px; color:var(--muted); }
 
-/* EMI partner logos */
-.emi-logos{
-  display:flex;
-  gap:18px;
-  align-items:center;
-  flex-wrap:wrap;
+/* Mobile Cards */
+.mobile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
-.emi-logos img{ height:44px; background: #fff; padding:6px; border-radius:8px; box-shadow: 0 6px 18px rgba(2,6,23,0.06); }
 
-/* Map */
-.map-wrap{ border-radius:12px; overflow:hidden; box-shadow: 0 10px 28px rgba(2,6,23,0.06); margin-top:10px;}
-.map-wrap iframe{ width:100%; height:260px; border:0; }
-
-/* Contact / CTA */
-.contact-row{ display:flex; gap:12px; flex-wrap:wrap; margin-bottom:12px; }
-.btn{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:10px 14px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:600;
-  border:none;
-  cursor:pointer;
+.mobile-card {
+  background: white;
+  width: 230px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+  animation: fadeInUp 1s ease-in;
 }
-.call-btn{ background: #0b61c7; color:#fff; }
-.wa-btn{ background: #25D366; color:#fff; }
-.mail-btn{ background:#6b7280; color:#fff; }
-.submit-btn{ background: var(--blue-700); color:#fff; }
 
-/* Contact form */
-.contact-form{ display:flex; flex-direction:column; gap:8px; margin-top:12px; max-width:520px; }
-.contact-form input, .contact-form textarea{
-  padding:10px 12px; border-radius:8px; border:1px solid #e6e9ef; background:#fff;
-  font-size:14px;
+.mobile-card:hover {
+  transform: translateY(-5px);
 }
-.contact-form button{ padding:10px 12px; border-radius:8px; border:0; cursor:pointer; font-weight:700; }
 
-/* Footer */
-.site-footer{ display:flex; justify-content:space-between; align-items:center; padding:16px; background:#0f1724; color:#fff; margin-top:20px; border-top-left-radius:12px; border-top-right-radius:12px; }
-.site-footer p{ margin:0; font-size:14px; opacity:.95; }
-
-/* Utility */
-.muted{ color:var(--muted); }
-
-/* Responsive tweaks */
-@media (max-width:640px){
-  .brand-row{ justify-content:center; }
-  .hero-overlay{ text-align:center; }
-  .site-footer{ flex-direction:column; gap:8px; text-align:center; }
-}
 .brand-logo {
   width: 100px;
-  height: auto;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-/* Simple animation: reveal on load */
+/* Contact Buttons */
+.contact-buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin: 8px;
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.call {
+  background: #28a745;
+}
+
+.whatsapp {
+  background: #25d366;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ddd;
+  padding: 15px 0;
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
