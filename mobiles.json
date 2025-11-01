@@ -1,0 +1,42 @@
+[
+  {
+    "brand": "Realme",
+    "model": "Realme 11x 5G",
+    "price": "₹13,499",
+    "emi": "EMI from ₹1,099 / month (Bajaj Finserv)",
+    "image": "assets/realme-11x.jpg",
+    "desc": "6.5\" display, 128GB storage, 48MP camera"
+  },
+  {
+    "brand": "Oppo",
+    "model": "Oppo A3 Pro",
+    "price": "₹17,999",
+    "emi": "EMI from ₹1,499 / month (HDB Finance)",
+    "image": "assets/oppo-a3pro.jpg",
+    "desc": "Large battery, fast charging"
+  },
+  {
+    "brand": "Vivo",
+    "model": "Vivo Y18e",
+    "price": "₹7,999",
+    "emi": "EMI from ₹699 / month (IDFC)",
+    "image": "assets/vivo-y18e.jpg",
+    "desc": "Value smartphone with solid battery life"
+  },
+  {
+    "brand": "Redmi",
+    "model": "Redmi 12",
+    "price": "₹9,999",
+    "emi": "EMI from ₹899 / month (Bajaj Finserv)",
+    "image": "assets/redmi-12.jpg",
+    "desc": "Reliable performer for daily use"
+  },
+  {
+    "brand": "Samsung",
+    "model": "Samsung Galaxy F15",
+    "price": "₹13,999",
+    "emi": "EMI from ₹1,199 / month (IDFC)",
+    "image": "assets/samsung-f15.jpg",
+    "desc": "Trusted brand with good after-sales"
+  }
+]
