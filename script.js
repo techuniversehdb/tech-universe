@@ -1,17 +1,33 @@
+// Load Products
 fetch('mobiles.json')
   .then(res => res.json())
   .then(data => {
-    const container = document.getElementById('mobiles');
-    data.forEach(phone => {
+    const productList = document.getElementById('product-list');
+    data.forEach(mobile => {
       const card = document.createElement('div');
-      card.classList.add('mobile-card');
+      card.className = 'card';
       card.innerHTML = `
-        <img src="${phone.logo}" alt="${phone.brand} Logo" class="brand-logo">
-        <h3>${phone.brand} ${phone.model}</h3>
-        <p><strong>Price:</strong> ${phone.price}</p>
-        <p><strong>EMI:</strong> ${phone.emi}</p>
+        <img src="${mobile.image}" alt="${mobile.name}">
+        <h3>${mobile.name}</h3>
+        <p>₹${mobile.price}</p>
+        <p><b>EMI:</b> ${mobile.emi}</p>
       `;
-      container.appendChild(card);
+      productList.appendChild(card);
     });
-  })
-  .catch(err => console.error("Error loading mobiles.json", err));
+  });
+
+// Preloader
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  preloader.style.opacity = "0";
+  setTimeout(() => preloader.style.display = "none", 500);
+});
+
+// Dark Mode
+const toggle = document.getElementById('themeToggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  const icon = toggle.querySelector('i');
+  icon.classList.toggle('fa-moon');
+  icon.classList.toggle('fa-sun');
+});
