@@ -3,7 +3,8 @@
     "brand": "OPPO",
     "model": "Reno14 5G",
     "price_inr": 37999,
-    "emi": "EMI available from ₹3,166/month",
+    "emi": "EMI from ₹3,166/month",
+    "spec": "8GB/256GB • 50MP • 5G",
     "image": "https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/reno14-series/Reno14-5G-India/standard-banner-01.png/_jcr_content/renditions/original./standard-banner-01.png",
     "source": "https://www.oppo.com/in/product/oppo-reno14-5g.P.P1110071"
   },
@@ -11,7 +12,8 @@
     "brand": "OPPO",
     "model": "F31 Pro 5G",
     "price_inr": 26999,
-    "emi": "EMI available from ₹2,249/month",
+    "emi": "EMI from ₹2,249/month",
+    "spec": "8GB/128GB • Night Portrait",
     "image": "https://www.oppo.com/content/dam/oppo/common/mkt/v2-2/f31-pro-5g/standard-banner-01.png",
     "source": "https://www.oppo.com/in/product/f31-pro-5g.P.P1110086"
   },
@@ -19,80 +21,90 @@
     "brand": "vivo",
     "model": "Y400 Pro 5G",
     "price_inr": 24999,
-    "emi": "EMI available from ₹2,083/month",
-    "image": "https://mshop.vivo.com/in/medias/vivo-Y400-Pro-5G-Series-First-Page-Banner-1920x1080.jpg",
-    "source": "https://mshop.vivo.com/in/"
-  },
-  {
-    "brand": "vivo (iQOO)",
-    "model": "Neo 10R",
-    "price_inr": 26999,
-    "emi": "EMI available from ₹2,249/month",
-    "image": "https://mshop.vivo.com/in/medias/iqoo-Nero-10R-Series-Page-Banner-1920x1080.jpg",
-    "source": "https://mshop.vivo.com/in/"
+    "emi": "EMI from ₹2,083/month",
+    "spec": "8GB/128GB • 120Hz • 50MP",
+    "image": "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-y400-pro-5g-1.jpg",
+    "source": "https://www.vivo.com/in/"
   },
   {
     "brand": "vivo",
     "model": "Z10 Lite 5G",
     "price_inr": 10499,
-    "emi": "EMI available from ₹874/month",
-    "image": "https://mshop.vivo.com/in/medias/vivo-Z10-Lite-Series-Page-Banner-1920x1080.jpg",
-    "source": "https://mshop.vivo.com/in/"
-  },
-  {
-    "brand": "Xiaomi / Redmi",
-    "model": "Redmi 14C 5G",
-    "price_inr": 8999,
-    "emi": "EMI available from ₹750/month",
-    "image": "https://i01.appmifile.com/webfile/globalimg/in/model/Redmi-14C-5G/Redmi-14C-5G-Gray.png",
-    "source": "https://www.mi.com/in/phone/"
-  },
-  {
-    "brand": "Xiaomi / Redmi",
-    "model": "Redmi Note 14 5G",
-    "price_inr": 16499,
-    "emi": "EMI available from ₹1,375/month",
-    "image": "https://i01.appmifile.com/webfile/globalimg/in/model/Redmi-Note-14-5G/Redmi-Note-14-5G-Phantom-Black.png",
-    "source": "https://www.mi.com/in/product-list/redmi/"
-  },
-  {
-    "brand": "Xiaomi / Redmi",
-    "model": "Redmi Note 14 Pro 5G",
-    "price_inr": 21999,
-    "emi": "EMI available from ₹1,833/month",
-    "image": "https://i01.appmifile.com/webfile/globalimg/in/model/Redmi-Note-14-Pro-5G/Redmi-Note-14-Pro-5G-Black.png",
-    "source": "https://www.mi.com/in/product-list/redmi/"
-  },
-  {
-    "brand": "Samsung",
-    "model": "Galaxy M17 5G",
-    "price_inr": 12499,
-    "emi": "EMI available from ₹1,042/month",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-m17-5g/m17-5g-cloud-blue-1200.jpg",
-    "source": "https://www.timesofindia.indiatimes.com/technology/mobiles-tabs/samsung-galaxy-m17-5g-goes-on-sale-in-india-price-starts-at-rs-12499/articleshow/124528033.cms"
+    "emi": "EMI from ₹874/month",
+    "spec": "6.72\" • 64MP • 5000mAh",
+    "image": "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-z10-lite-1.jpg",
+    "source": "https://www.vivo.com/in/"
   },
   {
     "brand": "Samsung",
     "model": "Galaxy M14",
     "price_inr": 8799,
-    "emi": "EMI available from ₹733/month",
-    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-m14/m14-gold-1200.jpg",
-    "source": "https://www.gadgets360.com/samsung-galaxy-m14-4g-price-in-india-124646"
+    "emi": "EMI from ₹733/month",
+    "spec": "6.6\" • 6000mAh • Exynos",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-m14-4g/m14-gold-1200.jpg",
+    "source": "https://www.samsung.com/in/smartphones/galaxy-m14-4g/"
   },
   {
-    "brand": "realme",
-    "model": "realme 11x 5G",
-    "price_inr": 14999,
-    "emi": "EMI available from ₹1,250/month",
-    "image": "https://www.realme.com/in/medias/realme-11x-5g-India-Product-Image-Gray.png",
-    "source": "https://www.realme.com/in/realme-11x-5g"
+    "brand": "Samsung",
+    "model": "Galaxy A55 5G",
+    "price_inr": 39999,
+    "emi": "EMI from ₹3,333/month",
+    "spec": "AMOLED • 50MP OIS • IP67",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-a55-5g/a55-5g-lavender-1200.jpg",
+    "source": "https://www.samsung.com/in/smartphones/galaxy-a55-5g/"
+  },
+  {
+    "brand": "Redmi",
+    "model": "Redmi Note 13 5G",
+    "price_inr": 15999,
+    "emi": "EMI from ₹1,333/month",
+    "spec": "AMOLED • 108MP • 8GB",
+    "image": "https://i02.appmifile.com/890_operator_in/02/08/2024/fb378a16cc0a8d836e9de91d1364e3ab.png",
+    "source": "https://www.mi.com/in/product/redmi-note-13-5g"
+  },
+  {
+    "brand": "Redmi",
+    "model": "Redmi Note 14 Pro 5G",
+    "price_inr": 21999,
+    "emi": "EMI from ₹1,833/month",
+    "spec": "120Hz • 200MP • 8/128GB",
+    "image": "https://i01.appmifile.com/webfile/globalimg/in/model/Redmi-Note-14-Pro-5G/Redmi-Note-14-Pro-5G-Black.png",
+    "source": "https://www.mi.com/in/product-list/redmi/"
+  },
+  {
+    "brand": "OPPO",
+    "model": "A78 5G",
+    "price_inr": 13999,
+    "emi": "EMI from ₹1,166/month",
+    "spec": "6.72\" • 5000mAh • 8GB",
+    "image": "https://fdn2.gsmarena.com/vv/pics/oppo/oppo-a78-5g-1.jpg",
+    "source": "https://www.oppo.com/in/"
   },
   {
     "brand": "vivo",
-    "model": "T4 Ultra",
-    "price_inr": 35999,
-    "emi": "EMI available from ₹2,999/month",
-    "image": "https://mshop.vivo.com/in/medias/vivo-T4-Ultra-Series-Page-Banner-1920x1080.jpg",
-    "source": "https://mshop.vivo.com/in/"
+    "model": "Y200 5G",
+    "price_inr": 19999,
+    "emi": "EMI from ₹1,667/month",
+    "spec": "120Hz • 64MP • 8/128GB",
+    "image": "https://fdn2.gsmarena.com/vv/pics/vivo/vivo-y200-5g-1.jpg",
+    "source": "https://www.vivo.com/in/"
+  },
+  {
+    "brand": "Samsung",
+    "model": "Galaxy F15",
+    "price_inr": 13999,
+    "emi": "EMI from ₹1,166/month",
+    "spec": "Exynos • 6000mAh • 50MP",
+    "image": "https://images.samsung.com/is/image/samsung/p6pim/in/galaxy-f15/f15-blue-1200.jpg",
+    "source": "https://www.samsung.com/in/smartphones/galaxy-f15-5g/"
+  },
+  {
+    "brand": "Redmi",
+    "model": "Redmi 14C 5G",
+    "price_inr": 8999,
+    "emi": "EMI from ₹750/month",
+    "spec": "6.72\" • 50MP • Octa-core",
+    "image": "https://i01.appmifile.com/webfile/globalimg/in/model/Redmi-14C-5G/Redmi-14C-5G-Gray.png",
+    "source": "https://www.mi.com/in/"
   }
 ]
