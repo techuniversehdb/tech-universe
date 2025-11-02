@@ -4,8 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tech Universe | Smart Mobile Store</title>
+
   <link rel="stylesheet" href="styles.css" />
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0061ff" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968871.png" />
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -37,12 +45,11 @@
   <section class="intro">
     <img 
       src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" 
-      alt="Store" 
-      class="store-img" 
+      alt="Store" class="store-img" 
     />
     <div class="intro-text">
       <h2>Welcome to Tech Universe</h2>
-      <p>We offer the latest smartphones, accessories, and EMI options from top brands like Vivo, Realme, and Apple. Visit us for the best deals!</p>
+      <p>We offer the latest smartphones and EMI options from top brands like Vivo, Oppo, Realme, and Apple. Visit us for the best deals!</p>
     </div>
   </section>
 
@@ -71,5 +78,12 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('✅ Service Worker Registered'))
+        .catch(err => console.log('Service Worker Error:', err));
+    }
+  </script>
 </body>
 </html>
