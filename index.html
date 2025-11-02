@@ -1,89 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tech Universe | Smart Mobile Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Universe | Smartphone Store Haldibari</title>
+  <meta name="description" content="Tech Universe offers the best deals on Oppo, Vivo, Samsung, and Redmi smartphones in Haldibari. Explore the latest phones with EMI options from Bajaj, HDB, and IDFC.">
+  <meta name="keywords" content="Tech Universe, Oppo, Vivo, Samsung, Redmi, Smartphones, Haldibari, EMI, Bajaj Finserv, HDB, IDFC, Mobile Store">
+  <meta name="author" content="Tech Universe">
+  <link rel="canonical" href="https://techuniversehdb.github.io/tech-universe/">
 
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Open Graph for SEO -->
+  <meta property="og:title" content="Tech Universe - Best Smartphone Deals in Haldibari">
+  <meta property="og:description" content="Latest Oppo, Vivo, Redmi, and Samsung smartphones with EMI offers at Tech Universe. Visit us at Goshala Road, Haldibari.">
+  <meta property="og:url" content="https://techuniversehdb.github.io/tech-universe/">
+  <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/1/12/Oppo_Logo_2019.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-  <!-- PWA Manifest -->
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#0061ff" />
+  <style>
+    body { background: #f8f9fa; }
+    .navbar { background-color: #212529; }
+    .navbar-brand { color: #fff; font-weight: 700; }
+    .hero { text-align: center; padding: 3rem 1rem; background: #fff; }
+    .hero h1 { font-size: 2rem; font-weight: 700; }
+    .card img { height: 220px; object-fit: contain; transition: transform .3s ease; }
+    .card:hover img { transform: scale(1.05); }
+    footer { background: #212529; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem; }
+  </style>
+</head>
 
-  <!-- Favicon -->
-  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968871.png" />
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">📱 Tech Universe</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Best Smartphone Deals in Haldibari</h1>
+    <p>Explore official Oppo, Vivo, Samsung, and Redmi phones with EMI offers from Bajaj, HDB, and IDFC Finance.</p>
+  </section>
+
+  <!-- Product Section -->
+  <div class="container py-3">
+    <div class="row g-3">
+      <!-- Oppo -->
+      <div class="col-md-3">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="https://image.oppo.com/content/dam/oppo/common/mkt/v2-2/a3-pro-en/listpage/A3-pro-blue-800x800.png" alt="Oppo A3 Pro">
+          <div class="card-body">
+            <h5>Oppo A3 Pro</h5>
+            <p class="text-muted">₹17,999 • AMOLED Display • 5000mAh Battery</p>
+            <a href="https://www.oppo.com/in/product/a3-pro/" target="_blank" class="btn btn-dark btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vivo -->
+      <div class="col-md-3">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="https://www.vivo.com/content/dam/vivo/in/product/vivo-y18-4g/specs/vivo-y18-4g-blue.png" alt="Vivo Y18">
+          <div class="card-body">
+            <h5>Vivo Y18</h5>
+            <p class="text-muted">₹7,999 • 4GB RAM • 5000mAh Battery</p>
+            <a href="https://www.vivo.com/in/products/y18" target="_blank" class="btn btn-dark btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Samsung -->
+      <div class="col-md-3">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-a556elbgins/gallery/in-galaxy-a55-sm-a556elbgins-thumb-539518853?$480_480_PNG$" alt="Samsung A55 5G">
+          <div class="card-body">
+            <h5>Samsung A55 5G</h5>
+            <p class="text-muted">₹39,999 • Exynos 1480 • 50MP Camera</p>
+            <a href="https://www.samsung.com/in/smartphones/galaxy-a55-5g/" target="_blank" class="btn btn-dark btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Redmi -->
+      <div class="col-md-3">
+        <div class="card h-100 text-center shadow-sm">
+          <img src="https://i02.appmifile.com/890_operator_in/02/08/2024/fb378a16cc0a8d836e9de91d1364e3ab.png" alt="Redmi Note 13 5G">
+          <div class="card-body">
+            <h5>Redmi Note 13 5G</h5>
+            <p class="text-muted">₹15,999 • AMOLED Display • 108MP Camera</p>
+            <a href="https://www.mi.com/in/product/redmi-note-13-5g/" target="_blank" class="btn btn-dark btn-sm">View</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact & Map -->
+  <div class="container text-center my-5">
+    <h4>📍 Visit Us</h4>
+    <p>Tech Universe, Goshala Road (Busstand), Haldibari, Coochbehar</p>
+    <p>Call us: <a href="tel:+917074550550">+91 70745 50550</a></p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14501.902328530073!2d88.881108116405!3d26.34178988553159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e3b6d6b7c36e67%3A0x6d7f64fda5a0db8a!2sHaldibari%2C%20West%20Bengal%20735122!5e0!3m2!1sen!2sin!4v1709734102907!5m2!1sen!2sin"
+            width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </div>
+
+  <footer>
+    <p>© 2025 Tech Universe | Built with ❤️ in Haldibari</p>
+  </footer>
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ElectronicsStore",
+    "@type": "LocalBusiness",
     "name": "Tech Universe",
-    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Oppo_Logo_2019.png",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Goshala Road (Busstand)",
       "addressLocality": "Haldibari",
-      "addressRegion": "Coochbehar",
+      "addressRegion": "West Bengal",
       "postalCode": "735122",
       "addressCountry": "IN"
     },
-    "telephone": "+91-7074550550",
-    "openingHours": "Mo-Su 09:00-21:00"
+    "telephone": "+917074550550",
+    "priceRange": "₹₹",
+    "openingHours": "Mo-Su 10:00-21:00"
   }
   </script>
-</head>
 
-<body>
-  <header>
-    <h1><i class="fas fa-mobile-alt"></i> Tech Universe</h1>
-    <p>Your Smart Mobile Destination</p>
-  </header>
-
-  <section class="intro">
-    <img 
-      src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=900&q=80" 
-      alt="Store" class="store-img" 
-    />
-    <div class="intro-text">
-      <h2>Welcome to Tech Universe</h2>
-      <p>We offer the latest smartphones and EMI options from top brands like Vivo, Oppo, Realme, and Apple. Visit us for the best deals!</p>
-    </div>
-  </section>
-
-  <section class="products" id="product-list">
-    <h2><i class="fas fa-tags"></i> Our Products</h2>
-    <div class="grid"></div>
-  </section>
-
-  <section class="contact">
-    <h2><i class="fas fa-map-marker-alt"></i> Find Us</h2>
-    <div class="map-container">
-      <iframe 
-        src="https://www.google.com/maps?q=Tech%20Universe%20Haldibari&output=embed" 
-        loading="lazy">
-      </iframe>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Tech Universe | All Rights Reserved</p>
-    <div class="buttons">
-      <a href="tel:+917074550550" class="btn call"><i class="fas fa-phone"></i> Call</a>
-      <a href="https://wa.me/917074550550" target="_blank" class="btn whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="mailto:techuniverse.hdb@gmail.com" class="btn email"><i class="fas fa-envelope"></i> Email</a>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('✅ Service Worker Registered'))
-        .catch(err => console.log('Service Worker Error:', err));
-    }
-  </script>
 </body>
 </html>
