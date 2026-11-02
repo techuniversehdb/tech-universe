@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECH UNIVERSE - Bajaj Finserv QR Poster</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Control Bar for uploading QR and Printing (Hidden during Print) */
+  .controls {
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .btn {
+    background-color: #005A9C;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  .btn-print {
+    background-color: #16a34a;
+  }
+  .btn:hover {
+    opacity: 0.9;
+  }
+
+  /* Poster Container (A4 Ratio) */
+  .poster {
+    width: 600px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Top Blue Header */
+  .header {
+    background-color: #005A9C;
+    color: #ffffff;
+    padding: 35px 20px 42px;
+    position: relative;
+  }
+  .shop-name {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  /* Yellow Overlapping Pill Badge */
+  .partner-badge {
+    background-color: #FFD026;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 32px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  }
+
+  /* Main Headlines */
+  .headline-section {
+    padding: 25px 30px 10px;
+  }
+  .main-title {
+    color: #005A9C;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  .sub-title {
+    color: #1a1a1a;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  /* Center QR Code Box */
+  .qr-wrapper {
+    margin: 15px auto 25px;
+    padding: 15px;
+    background: #ffffff;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  .qr-wrapper img {
+    width: 320px;
+    height: 320px;
+    display: block;
+    object-fit: contain;
+  }
+
+  /* Scan Call-to-Action Button */
+  .scan-cta-container {
+    position: relative;
+    margin: 10px auto 35px;
+    display: inline-block;
+  }
+  .camera-badge {
+    background-color: #005A9C;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .scan-btn {
+    background-color: #005A9C;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    padding: 18px 45px 15px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+  }
+
+  /* Decorative Dots on Bottom Left & Right */
+  .dots-left, .dots-right {
+    position: absolute;
+    bottom: 95px;
+    width: 60px;
+    height: 120px;
+    background-image: radial-gradient(#94b8d7 2.5px, transparent 2.5px);
+    background-size: 14px 14px;
+    opacity: 0.7;
+  }
+  .dots-left { left: 20px; }
+  .dots-right { right: 20px; }
+
+  /* Bottom Light Blue Bar */
+  .footer-bar {
+    background-color: #BCE0FD;
+    color: #111111;
+    padding: 18px 15px;
+    font-size: 19px;
+    font-weight: 700;
+    width: 100%;
+  }
+
+  /* Print Optimization */
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+    }
+    .controls {
+      display: none;
+    }
+    .poster {
+      box-shadow: none;
+      width: 100%;
+      max-width: 100%;
+      height: 100vh;
+    }
+    * {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Top Controls (Will not appear in Print) -->
+  <div class="controls">
+    <label class="btn">
+      📂 1. Select Your QR Code Image
+      <input type="file" id="qrInput" accept="image/*" style="display: none;">
+    </label>
+    <button class="btn btn-print" onclick="window.print()">🖨️ 2. Print / Save as PDF</button>
+  </div>
+
+  <!-- Main Poster Layout -->
+  <div class="poster">
+    <div>
+      <div class="header">
+        <div class="shop-name">TECH UNIVERSE</div>
+      </div>
+
+      <div class="partner-badge">
+        Authorized Partner - Bajaj Finserv
+      </div>
+
+      <div class="headline-section">
+        <div class="main-title">BUY YOUR DREAM<br>SMARTPHONE ON EASY EMI!</div>
+        <div class="sub-title">Check Your Pre-Approved Loan Offer</div>
+      </div>
+
+      <div class="qr-wrapper">
+        <!-- Default looks for image.png, or updates when you select file above -->
+        <img id="qrImage" src="image.png" alt="Upload QR Code using the button above">
+      </div>
+    </div>
+
+    <div class="dots-left"></div>
+    <div class="dots-right"></div>
+
+    <div>
+      <div class="scan-cta-container">
+        <div class="camera-badge">
+          <!-- Camera Icon SVG -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <div class="scan-btn">SCAN HERE TO CHECK OFFER</div>
+      </div>
+
+      <div class="footer-bar">
+        No Cost EMI &nbsp;|&nbsp; Zero Down Payment &nbsp;|&nbsp; Instant Approval
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Script to directly load your original QR code image into the poster
+    document.getElementById('qrInput').addEventListener('change', function(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('qrImage').src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+
+</body>
+</html>
