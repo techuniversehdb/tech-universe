@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TECH UNIVERSE - Bajaj Finserv QR Poster</title>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Print Button Bar (Hidden when printing) */
+  .controls {
+    margin-bottom: 20px;
+  }
+  .btn-print {
+    background-color: #005A9C;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  .btn-print:hover {
+    background-color: #003d6b;
+  }
+
+  /* Exact Poster Layout Matching Generated Image */
+  .poster {
+    width: 600px;
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  /* Top Blue Banner */
+  .header {
+    background-color: #005A9C;
+    color: #ffffff;
+    padding: 38px 20px 44px;
+    position: relative;
+  }
+  .shop-name {
+    font-size: 54px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  /* Yellow Overlapping Badge */
+  .partner-badge {
+    background-color: #FFD026;
+    color: #111111;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 34px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-top: -24px;
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Headlines */
+  .headline-section {
+    padding: 26px 30px 10px;
+    position: relative;
+    z-index: 2;
+  }
+  .main-title {
+    color: #005A9C;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.18;
+    text-transform: uppercase;
+  }
+  .sub-title {
+    color: #111111;
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+
+  /* Decorative Side Geometric Lines */
+  .geo-left, .geo-right {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 1.5px solid #94b8d7;
+    transform: rotate(45deg);
+    z-index: 1;
+    pointer-events: none;
+  }
+  .geo-left {
+    left: -50px;
+    top: 470px;
+    box-shadow: -12px 12px 0 -1px #ffffff, -12px 12px 0 0.5px #94b8d7;
+  }
+  .geo-right {
+    right: -50px;
+    top: 250px;
+    box-shadow: 12px -12px 0 -1px #ffffff, 12px -12px 0 0.5px #94b8d7;
+  }
+
+  /* Embedded Exact QR Code */
+  .qr-wrapper {
+    margin: 15px auto 20px;
+    padding: 12px;
+    background: #ffffff;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+  }
+  .qr-wrapper svg {
+    width: 330px;
+    height: 330px;
+    display: block;
+  }
+
+  /* Scan Button with Camera Icon */
+  .scan-cta-container {
+    position: relative;
+    margin: 15px auto 35px;
+    display: inline-block;
+    z-index: 2;
+  }
+  .camera-badge {
+    background-color: #005A9C;
+    color: #ffffff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .scan-btn {
+    background-color: #005A9C;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    padding: 18px 46px 15px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+  }
+
+  /* Decorative Corner Dots */
+  .dots-left, .dots-right {
+    position: absolute;
+    bottom: 90px;
+    width: 56px;
+    height: 112px;
+    background-image: radial-gradient(#94b8d7 2.5px, transparent 2.5px);
+    background-size: 14px 14px;
+    z-index: 1;
+  }
+  .dots-left { left: 24px; }
+  .dots-right { right: 24px; }
+
+  /* Bottom Light Blue Bar */
+  .footer-bar {
+    background-color: #BCE0FD;
+    color: #111111;
+    padding: 18px 15px;
+    font-size: 19px;
+    font-weight: 700;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media print {
+    body { background: none; padding: 0; }
+    .controls { display: none; }
+    .poster { box-shadow: none; width: 100%; max-width: 100%; height: 100vh; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="controls">
+    <button class="btn-print" onclick="window.print()">🖨️ Print Poster / Save as PDF</button>
+  </div>
+
+  <div class="poster">
+    <div class="geo-left"></div>
+    <div class="geo-right"></div>
+
+    <div>
+      <div class="header">
+        <div class="shop-name">TECH UNIVERSE</div>
+      </div>
+
+      <div class="partner-badge">
+        Authorized Partner - Bajaj Finserv
+      </div>
+
+      <div class="headline-section">
+        <div class="main-title">BUY YOUR DREAM<br>SMARTPHONE ON EASY EMI!</div>
+        <div class="sub-title">Check Your Pre-Approved Loan Offer</div>
+      </div>
+
+      <!-- Your Exact Original Bajaj Finserv QR Code Embedded Directly -->
+      <div class="qr-wrapper">
+        <svg viewBox="0 0 37 37" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg">
+          <rect width="37" height="37" fill="#ffffff"/>
+          <path fill="#002e5b" d="M0,0h7v1h-7zM11,0h1v1h-1zM13,0h2v1h-2zM16,0h2v1h-2zM20,0h2v1h-2zM26,0h1v1h-1zM28,0h1v1h-1zM30,0h7v1h-7zM0,1h1v1h-1zM6,1h1v1h-1zM9,1h1v1h-1zM12,1h1v1h-1zM16,1h2v1h-2zM21,1h5v1h-5zM28,1h1v1h-1zM30,1h1v1h-1zM36,1h1v1h-1zM0,2h1v1h-1zM2,2h3v1h-3zM6,2h1v1h-1zM8,2h3v1h-3zM12,2h1v1h-1zM15,2h3v1h-3zM19,2h2v1h-2zM22,2h1v1h-1zM26,2h1v1h-1zM30,2h1v1h-1zM32,2h3v1h-3zM36,2h1v1h-1zM0,3h1v1h-1zM2,3h3v1h-3zM6,3h1v1h-1zM9,3h2v1h-2zM12,3h2v1h-2zM16,3h1v1h-1zM20,3h1v1h-1zM22,3h4v1h-4zM27,3h1v1h-1zM30,3h1v1h-1zM32,3h3v1h-3zM36,3h1v1h-1zM0,4h1v1h-1zM2,4h3v1h-3zM6,4h1v1h-1zM8,4h2v1h-2zM12,4h1v1h-1zM14,4h1v1h-1zM16,4h3v1h-3zM21,4h1v1h-1zM23,4h1v1h-1zM25,4h1v1h-1zM27,4h1v1h-1zM30,4h1v1h-1zM32,4h3v1h-3zM36,4h1v1h-1zM0,5h1v1h-1zM6,5h1v1h-1zM9,5h1v1h-1zM12,5h1v1h-1zM15,5h2v1h-2zM19,5h2v1h-2zM23,5h4v1h-4zM30,5h1v1h-1zM36,5h1v1h-1zM0,6h7v1h-7zM8,6h1v1h-1zM10,6h1v1h-1zM12,6h1v1h-1zM14,6h1v1h-1zM16,6h1v1h-1zM18,6h1v1h-1zM20,6h1v1h-1zM22,6h1v1h-1zM24,6h1v1h-1zM26,6h1v1h-1zM28,6h1v1h-1zM30,6h7v1h-7zM9,7h4v1h-4zM15,7h4v1h-4zM22,7h1v1h-1zM27,7h1v1h-1zM2,8h1v1h-1zM4,8h4v1h-4zM9,8h2v1h-2zM12,8h2v1h-2zM16,8h4v1h-4zM21,8h1v1h-1zM24,8h1v1h-1zM27,8h1v1h-1zM29,8h2v1h-2zM35,8h2v1h-2zM0,9h1v1h-1zM5,9h1v1h-1zM8,9h1v1h-1zM10,9h4v1h-4zM15,9h2v1h-2zM19,9h1v1h-1zM21,9h3v1h-3zM26,9h1v1h-1zM28,9h1v1h-1zM30,9h2v1h-2zM34,9h2v1h-2zM1,10h1v1h-1zM3,10h2v1h-2zM6,10h3v1h-3zM10,10h4v1h-4zM18,10h1v1h-1zM20,10h3v1h-3zM24,10h2v1h-2zM31,10h4v1h-4zM36,10h1v1h-1zM0,11h1v1h-1zM5,11h1v1h-1zM7,11h4v1h-4zM12,11h2v1h-2zM15,11h5v1h-5zM21,11h2v1h-2zM25,11h1v1h-1zM29,11h3v1h-3zM34,11h1v1h-1zM0,12h1v1h-1zM2,12h1v1h-1zM6,12h5v1h-5zM13,12h2v1h-2zM16,12h2v1h-2zM21,12h2v1h-2zM24,12h2v1h-2zM27,12h7v1h-7zM36,12h1v1h-1zM0,13h3v1h-3zM7,13h6v1h-6zM14,13h1v1h-1zM16,13h1v1h-1zM18,13h3v1h-3zM23,13h2v1h-2zM26,13h2v1h-2zM29,13h3v1h-3zM33,13h2v1h-2zM1,14h2v1h-2zM4,14h1v1h-1zM6,14h1v1h-1zM8,14h5v1h-5zM14,14h3v1h-3zM18,14h2v1h-2zM21,14h3v1h-3zM25,14h1v1h-1zM27,14h1v1h-1zM29,14h3v1h-3zM33,14h1v1h-1zM36,14h1v1h-1zM0,15h3v1h-3zM6,15h2v1h-2zM12,15h5v1h-5zM18,15h4v1h-4zM24,15h4v1h-4zM31,15h1v1h-1zM33,15h1v1h-1zM35,15h1v1h-1zM2,16h2v1h-2zM6,16h1v1h-1zM8,16h1v1h-1zM11,16h1v1h-1zM14,16h5v1h-5zM20,16h1v1h-1zM22,16h1v1h-1zM25,16h1v1h-1zM29,16h4v1h-4zM35,16h2v1h-2zM1,17h2v1h-2zM5,17h3v1h-3zM10,17h2v1h-2zM14,17h3v1h-3zM18,17h1v1h-1zM21,17h5v1h-5zM28,17h1v1h-1zM30,17h2v1h-2zM33,17h3v1h-3zM0,18h1v1h-1zM2,18h1v1h-1zM5,18h4v1h-4zM10,18h5v1h-5zM16,18h1v1h-1zM18,18h2v1h-2zM21,18h4v1h-4zM28,18h2v1h-2zM34,18h1v1h-1zM0,19h2v1h-2zM7,19h6v1h-6zM15,19h2v1h-2zM20,19h1v1h-1zM22,19h2v1h-2zM27,19h4v1h-4zM32,19h1v1h-1zM34,19h3v1h-3zM0,20h3v1h-3zM6,20h1v1h-1zM8,20h1v1h-1zM10,20h4v1h-4zM15,20h3v1h-3zM21,20h1v1h-1zM25,20h3v1h-3zM29,20h4v1h-4zM34,20h1v1h-1zM36,20h1v1h-1zM1,21h1v1h-1zM4,21h4v1h-4zM9,21h2v1h-2zM14,21h1v1h-1zM17,21h5v1h-5zM25,21h1v1h-1zM27,21h1v1h-1zM30,21h5v1h-5zM0,22h2v1h-2zM4,22h1v1h-1zM7,22h4v1h-4zM12,22h3v1h-3zM17,22h2v1h-2zM21,22h5v1h-5zM28,22h5v1h-5zM34,22h1v1h-1zM36,22h1v1h-1zM2,23h2v1h-2zM7,23h1v1h-1zM11,23h2v1h-2zM16,23h5v1h-5zM23,23h5v1h-5zM29,23h1v1h-1zM33,23h1v1h-1zM0,24h3v1h-3zM6,24h1v1h-1zM8,24h1v1h-1zM11,24h2v1h-2zM16,24h2v1h-2zM19,24h6v1h-6zM27,24h2v1h-2zM30,24h5v1h-5zM1,25h1v1h-1zM3,25h2v1h-2zM11,25h1v1h-1zM15,25h4v1h-4zM20,25h1v1h-1zM22,25h1v1h-1zM24,25h1v1h-1zM26,25h1v1h-1zM29,25h1v1h-1zM34,25h2v1h-2zM0,26h2v1h-2zM4,26h2v1h-2zM8,26h1v1h-1zM11,26h2v1h-2zM14,26h5v1h-5zM20,26h2v1h-2zM24,26h4v1h-4zM32,26h4v1h-4zM1,27h1v1h-1zM4,27h2v1h-2zM11,27h1v1h-1zM13,27h2v1h-2zM16,27h2v1h-2zM19,27h1v1h-1zM22,27h3v1h-3zM26,27h2v1h-2zM29,27h1v1h-1zM33,27h2v1h-2zM36,27h1v1h-1zM8,28h3v1h-3zM12,28h1v1h-1zM16,28h2v1h-2zM19,28h1v1h-1zM22,28h1v1h-1zM24,28h9v1h-9zM34,28h1v1h-1zM0,29h7v1h-7zM9,29h1v1h-1zM12,29h3v1h-3zM16,29h2v1h-2zM19,29h2v1h-2zM22,29h3v1h-3zM28,29h1v1h-1zM32,29h2v1h-2zM35,29h2v1h-2zM0,30h1v1h-1zM6,30h1v1h-1zM8,30h2v1h-2zM12,30h2v1h-2zM15,30h2v1h-2zM21,30h4v1h-4zM26,30h3v1h-3zM30,30h1v1h-1zM32,30h2v1h-2zM35,30h1v1h-1zM0,31h1v1h-1zM2,31h3v1h-3zM6,31h1v1h-1zM8,31h3v1h-3zM13,31h1v1h-1zM15,31h4v1h-4zM20,31h3v1h-3zM24,31h1v1h-1zM28,31h1v1h-1zM32,31h4v1h-4zM0,32h1v1h-1zM2,32h3v1h-3zM6,32h1v1h-1zM9,32h1v1h-1zM11,32h3v1h-3zM16,32h2v1h-2zM22,32h7v1h-7zM30,32h1v1h-1zM32,32h2v1h-2zM35,32h2v1h-2zM0,33h1v1h-1zM2,33h3v1h-3zM6,33h1v1h-1zM9,33h4v1h-4zM15,33h3v1h-3zM19,33h1v1h-1zM23,33h1v1h-1zM25,33h3v1h-3zM31,33h2v1h-2zM35,33h2v1h-2zM0,34h1v1h-1zM6,34h1v1h-1zM8,34h2v1h-2zM13,34h1v1h-1zM15,34h3v1h-3zM21,34h2v1h-2zM25,34h1v1h-1zM27,34h4v1h-4zM33,34h1v1h-1zM35,34h1v1h-1zM0,35h7v1h-7zM10,35h1v1h-1zM12,35h2v1h-2zM15,35h2v1h-2zM18,35h2v1h-2zM23,35h5v1h-5zM29,35h1v1h-1zM31,35h1v1h-1zM33,35h2v1h-2zM9,36h3v1h-3zM13,36h5v1h-5zM19,36h1v1h-1zM21,36h1v1h-1zM24,36h3v1h-3zM29,36h5v1h-5z"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="dots-left"></div>
+    <div class="dots-right"></div>
+
+    <div>
+      <div class="scan-cta-container">
+        <div class="camera-badge">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+        </div>
+        <div class="scan-btn">SCAN HERE TO CHECK OFFER</div>
+      </div>
+
+      <div class="footer-bar">
+        No Cost EMI &nbsp;|&nbsp; Zero Down Payment &nbsp;|&nbsp; Instant Approval
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
